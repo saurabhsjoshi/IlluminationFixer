@@ -38,15 +38,16 @@ public class ScreenReceiver extends BroadcastReceiver {
         	else
         		i.putExtra("value", 0);
        }
-    	Log.i("SR" , "CALLED");
         context.startService(i);
     }
     
     private int ran(){
-    	int Low = 150;
-   	    int High = 250;
+    	//WHY DOSNT IT WORK IF I PUT SAME VALUE TWICE :/
+    	int Low = 75;
+   	    int High = 150;
    	    Random r = new Random();
    	    int R = r.nextInt(High-Low) + Low;
+   	    Log.i("SR" , "Setting Value to: " + R);
    	    return R;
     }
  
